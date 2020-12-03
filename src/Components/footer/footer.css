@@ -1,0 +1,33 @@
+
+
+html {
+    height: 100%;
+    min-height: 100%;
+  }
+  
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+  }
+
+  footer {
+      background-color: #252e39;
+      margin-top: 100px;
+     
+      height: 70px;
+  }
+
+  footer strong {
+    text-align: center;
+    display: block;
+    line-height: 3.5;
+    margin-top: 25px;
+    color: whitesmoke;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    background: -webkit-linear-gradient(rgb(238, 238, 238), rgb(17, 134, 180));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+

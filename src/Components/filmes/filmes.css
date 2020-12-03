@@ -1,0 +1,258 @@
+
+main {
+width: 100%;
+height: 550px;
+margin: auto;
+display: block;
+}
+
+.main-content {
+width: 100%;
+max-width: 1300px;
+height: 540px;
+margin:auto;
+display: flex;
+position: relative;
+}
+
+.poster {
+border-width: 0px;
+min-width: 300px;
+width: 300px;
+height: 450px;
+overflow: hidden;
+margin-top: 30px;
+}
+
+.poster .like  {
+width: 100%;
+max-width: 300px;
+height: 40px;
+margin-top: 410px;
+background-color: rgba(0, 0, 0, 0.705);
+}
+
+.poster .like i {    
+margin-right: 5px;
+color: rgb(200, 77, 77);
+font-size: 22px;
+}
+
+.poster .like p {
+color: whitesmoke;
+line-height: 2.5;
+text-align: center;
+margin-left: 5px;
+font-size: 18px;
+}
+
+.textos-box {
+width: 1000px;
+height: 500px;
+margin: auto;
+display: block;
+margin-top: 50px;
+margin-left: 25px;
+}
+
+.textos-box p {
+width: auto;
+font-size: 15px;
+text-align: left;
+color: whitesmoke;
+margin: auto;
+display: flex;
+float: left;
+margin-left: 5px;
+}
+
+.textos-box strong {
+color: whitesmoke;
+height: 150px;
+font-size: 18px;
+text-align: left;
+margin: auto;
+display: flex;
+padding-right: 20px;
+float: left;
+margin-left: 5px;
+font-family: italic;
+text-align: justify;
+margin-top: 10px;
+margin-bottom: 20px;
+}
+
+.textos-box h1 {
+width: auto;
+font-size: 36px;
+text-align: left;
+display: flex;
+color: rgb(235, 235, 235);
+font-family: Arial, sans-serif;
+font-weight: 400;
+}
+
+.textos-box h5 {
+width: auto;
+font-size: 15px;
+text-align: left;
+margin: auto;
+display: flex;
+float: left;
+margin-left: 5px;
+color: rgb(235, 235, 235);
+font-family: Arial, sans-serif;
+font-weight: 400;
+}
+.tagline {
+margin-bottom: 0;
+font-size: 18px;
+font-weight: 400;
+font-style: italic;
+opacity: 0.8;
+color: white;
+}
+.textos-box h6 {
+width: auto;
+font-size: 15px;
+text-align: left;
+margin: auto;
+display: flex;
+float: left;
+margin-left: 5px;
+color: rgb(235, 235, 235);
+font-family: Arial, sans-serif;
+font-weight: 400;
+}
+
+.avaliacao-box {
+margin-top: 70px;
+padding: 5px;
+height: 100px;
+display: flex;
+}
+
+.avaliacao-box strong {
+margin-top: 5px;
+width: 100px;
+height: 80px;
+float: left;
+color: rgb(241, 241, 241);
+color: rgb(235, 235, 235);
+font-family: Arial, sans-serif;
+font-weight: 400;
+}
+.textos-box .overview {
+color: rgb(235, 235, 235);
+font-family: Arial, sans-serif;
+font-weight: 400;
+}
+
+.circlet-films {
+width: 40px;
+height: 40px;
+background-color: rgb(15, 33, 71);
+border-radius: 50px;
+color: whitesmoke;
+border: 3px solid rgb(51, 139, 51);
+float: left;
+margin-top: 5px;
+margin-left: 20px;
+}
+    
+.circlet-films p {
+width: 50px;
+text-align: center;
+margin-top: 11px;
+margin-left: -5px;
+display: block;
+font-size:14px;
+}
+.credits-title h1 {
+    margin-top: 50px!important;
+}
+
+section {
+width: 100%;
+max-width: 1300px;
+height: 235px;
+margin: 70px auto;
+display: flex;
+margin-bottom: 100px;
+}
+
+section .crew-box {
+display: flex;
+overflow-x: scroll;
+overflow-y: hidden;
+
+}
+
+section .crew-box > div {
+width: 120px;
+height: 170px;
+background-color: #f1f1f1;
+margin: 5px;
+padding: 25px;
+}
+
+/* trailler vídeo cfg */
+.iframe {
+width: 100%;
+max-width: 500px;
+height: 400px;
+margin: auto;
+margin-bottom: 100px;
+display: block;
+border: 1px solid transparent;
+border-radius: 8px;
+}
+
+.fade-box {
+width: 140px;
+margin-left: -10px;
+display: block;
+margin-top: 160px;
+background-color: rgba(0, 0, 0, 0.26);
+}
+
+.fade-content {
+width: 135px;
+margin: auto;
+display: block;
+color:white;
+font-size: 14px;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.fade-content p {
+width: 135px;
+margin: auto;
+display: block;
+color: whitesmoke(231, 230, 230);
+font-size: 14px;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+.back-button-box {
+width: 100%;
+max-width: 50px;
+height: 30px;
+border-radius: 5px;
+background-color: rgb(194, 73, 73);
+margin:auto;
+display: block;
+line-height: 1;
+}
+
+.back-button button a {
+    width: 100%;
+}
+
+.back-button-box a {
+width: 100%;
+text-decoration: none;
+color: whitesmoke;
+font-size: 30px;
+}
+
