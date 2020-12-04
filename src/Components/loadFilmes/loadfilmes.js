@@ -3,9 +3,9 @@ import ReactDOM from "react-dom";
 import "./loadfilmes.css";
 import "./medias.css";
 
-import Header from '../header/header'
+import Header from "../header/header";
 
-import Footer from '../footer/footer'
+import Footer from "../footer/footer";
 
 import { Link } from "react-router-dom";
 
@@ -18,7 +18,7 @@ export default class LoadFilmes extends Component {
     super(props);
     this.state = {
       // Filmes
-      Filmes: [], 
+      Filmes: [],
       Trending: [],
       mostPopular: [],
       mostRated: [],
@@ -68,7 +68,7 @@ export default class LoadFilmes extends Component {
     this.setState({ search: search });
 
     let querySearch = `https://api.themoviedb.org/3/search/movie?api_key=5f0de47789bd5535f17999cce273751e&query=${`${search}`}&language=pt-BR`;
-   await fetch(querySearch)
+    await fetch(querySearch)
       .then((r) => r.json())
       .then((json) => {
         if (this.state.search === search) {
@@ -92,9 +92,9 @@ export default class LoadFilmes extends Component {
       });
   }
 
- async loadTrending() {
+  async loadTrending() {
     let urlTrending = `https://api.themoviedb.org/3/trending/movie/day?api_key=5f0de47789bd5535f17999cce273751e&language=pt-BR`;
-   await fetch(urlTrending)
+    await fetch(urlTrending)
       // tratamento de erros da api;
       .then((r) => {
         //
@@ -126,9 +126,9 @@ export default class LoadFilmes extends Component {
       });
   }
 
- async loadMostPopular() {
+  async loadMostPopular() {
     let urlPopular = `https://api.themoviedb.org/3/movie/popular?api_key=5f0de47789bd5535f17999cce273751e&language=pt-BR&page=5`;
-   await fetch(urlPopular)
+    await fetch(urlPopular)
       .then((r) => r.json())
       .then((json) => {
         this.setState({ mostPopular: json.results });
@@ -152,27 +152,29 @@ export default class LoadFilmes extends Component {
 
   render() {
     const { search, movies } = this.state;
-    return (      
-      <div>
-        <Header /> 
+    return (
+      <div onClick={this.closeSearchBar}>
+        <Header />
         <button className="back">
           <Link to="/">
             <i class="fas fa-long-arrow-alt-left"></i>
           </Link>
         </button>
-        <button className="search-result-button" onClick={this.closeSearchBar}>
-          <i class="fas fa-search"> </i>
-        </button>
 
-        {this.state.searchBarTab && (
+        {/* <button className="search-result-button" onClick={this.closeSearchBar}>
+          <i class="fas fa-search"> </i>
+        </button> */}
+
+       
           <section className="search-box">
             <div
               className="search-content"
-              ref={(node) => {
-                this.node = node;
-              }}
+              // ref={(node) => {
+              //   this.node = node;
+              // }}
             >
-              <input
+              <input 
+               ref={( node ) => { this.node = node }}
                 type="text"
                 autoFocus
                 placeholder=" Exemplo: O Poderoso Chefão "
@@ -185,7 +187,7 @@ export default class LoadFilmes extends Component {
                 data={movies}
                 renderResults={(res) => (
                   <div
-                    className="search-result"
+                    className="search-result"                   
                     style={
                       this.state.search.length >= 3
                         ? { display: "block" }
@@ -235,7 +237,7 @@ export default class LoadFilmes extends Component {
               />
             </div>
           </section>
-        )}
+       
 
         <section className="header-card">
           <h1 className="titles"> Tendências </h1>
@@ -432,7 +434,7 @@ export default class LoadFilmes extends Component {
                         {item.title || item.name}
                       </p>
                     </div>
-                  </div>  
+                  </div>
                 </Link>
               );
             })}
