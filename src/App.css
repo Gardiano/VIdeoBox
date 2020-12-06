@@ -7,6 +7,10 @@ outline: 0;
 box-sizing: border-box;
 background-color:  #fafafa;
 overflow-x: hidden;
+
+background-image: 
+linear-gradient(to right top, #252e39, #2d3640, #363e48, #3f474f, #484f57);
+
 } 
 
 .App {
