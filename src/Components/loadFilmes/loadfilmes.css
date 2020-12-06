@@ -34,27 +34,29 @@ margin: auto;
 
 .search-content input {
 width: 100%;
-display: flex;   
+display: flex;
 height: 40px;       
 outline: none;        
 border: none;
 outline: none;
-background-color:rgb(250, 250, 250);
-background-color:rgb(245, 245, 245);
+background-color: transparent;
 margin: 5px auto;
 display: flex;
 text-align: center;
-border-bottom: 1px solid grey;
+color: white;
+border-bottom: 2px solid #252e39;
+border-radius: 4px;
 }
 
 .search-content input::placeholder {
-color: rgb(71, 71, 71);
+color: whitesmoke;
 opacity: 1; 
 font-family: monospace;
 }
 
 .search-content :focus {
-border-bottom: 3px solid grey;
+background: #252e39;
+border-bottom: 3px solid #181e25;
 transition: 0.2s;
 }
 
@@ -67,13 +69,13 @@ display: flex;
 .search-result {
 width: 655px;
 height: 300px;
-background-color: white!important;
+background-color: #252e39;
 margin: 1px auto;
 display: block;
 z-index: 9999;
 position: relative;
 overflow-y: scroll;
-border-bottom: 1px solid rgb(190, 188, 188);
+border-bottom: 1px solid #495b70;
 line-height: 2;
 padding-bottom: 4px;
 overflow-y: scroll;
@@ -87,8 +89,8 @@ width: 100%;
 height: 45px;
 font-size: 16px;
 font-weight: 500;
-color: rgb(83, 78, 78)!important;
-border-bottom: 1px solid rgb(221, 221, 221);
+color: whitesmoke;
+border-bottom: 1px solid #181e25;
 }
 
 .search-result a {
@@ -157,7 +159,7 @@ text-decoration: none;
 }
 
 .titles {
-color: #252e39;
+color: whitesmoke;
 text-align: left;
 margin-left: 10px;
 margin-top: 0px;
@@ -165,12 +167,15 @@ margin-bottom: -4px;
 }
 
 .fade {
-background-color: rgba(0, 0, 0, 0.192);
+background-color: rgba(0, 0, 0, 0.712);
 width: 194px;
-height: 30px;
+height: 55px;
 display: block;
-margin-top: 261px;
+margin-top: 235px;
 z-index: 9999!important;
+font-weight: 100;
+font-family: 'Bebas Neue', cursive;
+
 }
 
 a .circlet {
@@ -216,23 +221,26 @@ float: right;
 }
 
 .fade:hover {
-background-color: rgba(0, 0, 0, 0.698);
+background-color: rgba(0, 0, 0, 0.911);
 transition: 1s;
+font-family: 'Bebas Neue', cursive;
 }
 
 .titulo {
-color: white;
+color: whitesmoke;
 display: block;
 line-height: 2;
-font-size: 15px;
+font-size: 16px;
 position: relative;
+text-align: center;
+line-height: 3.5;
 }
 
-.titulo:hover {
-color: #ffffff;
+.titulo:hover {    
+color: whitesmoke;
 font-size: 14px;
 transition: 0.4s;
-line-height: 1.7;
+line-height: 4;
 }
 
 a {
@@ -246,20 +254,20 @@ height: 10px;
   
 /* Track */
 ::-webkit-scrollbar-track {    
-background: transparent;
+background: #495b70;
+}
 
-}  
 /* Handle */
 ::-webkit-scrollbar-thumb {
 height: 1px;
-background: #616c85;
+background: #181e25;
 border-radius: 50px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
 height: 1px;
-background: #65748f;
+background: #252e39;
 }
 
 

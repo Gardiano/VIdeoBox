@@ -157,92 +157,84 @@ export default class LoadFilmes extends Component {
         <Header />
         <button className="back">
           <Link to="/">
-            <i class="fas fa-long-arrow-alt-left"></i>
+            <i 
+            style={{marginRight:'10px!important'}}
+            class="fas fa-long-arrow-alt-left"></i>
           </Link>
         </button>
 
-        {/* <button className="search-result-button" onClick={this.closeSearchBar}>
-          <i class="fas fa-search"> </i>
-        </button> */}
+        <section className="search-box">
+          <div className="search-content">
+            <input
+              ref={(node) => {
+                this.node = node;
+              }}
+              type="text"              
+              placeholder=" Exemplo: O Poderoso Chefão "
+              value={`${search}`}
+              onChange={(e) => this.queryMovie(e)}
+            />
 
-       
-          <section className="search-box">
-            <div
-              className="search-content"
-              // ref={(node) => {
-              //   this.node = node;
-              // }}
-            >
-              <input 
-               ref={( node ) => { this.node = node }}
-                type="text"
-                autoFocus
-                placeholder=" Exemplo: O Poderoso Chefão "
-                value={`${search}`}
-                onChange={(e) => this.queryMovie(e)}
-              />
-
-              <FilterResults
-                value={search}
-                data={movies}
-                renderResults={(res) => (
-                  <div
-                    className="search-result"                   
-                    style={
-                      this.state.search.length >= 3
-                        ? { display: "block" }
-                        : { display: "none" }
-                    }
-                  >
-                    {res.map((data, index) => (
-                      <div
-                        key={index.id}
-                        style={
-                          this.state.search === " "
-                            ? { display: "none" }
-                            : { display: "block" }
-                        }
-                      >
-                        <Link to={`Filme/${data?.id}`}>
-                          <span
-                            className="image-link-film"
-                            style={{
-                              backgroundSize: "100px 50px",
-                              backgroundPosition: "center",
-                              backgroundRepeat: "no-repeat",
-                              backgroundImage: `url(${`https://image.tmdb.org/t/p/w500${data?.poster_path}`})`,
-                            }}
-                          ></span>
-                          <p>
-                            {data?.title || data?.name}
-                            <div
-                              className="circlet-search"
-                              style={
-                                (data?.vote_average <= 4
-                                  ? { borderColor: "red" }
-                                  : { borderColor: "gold" },
-                                data?.vote_average <= 7
-                                  ? { borderColor: "gold" }
-                                  : { borderColor: "green" })
-                              }
-                            >
-                              {data?.vote_average}
-                            </div>
-                          </p>
-                        </Link>
-                      </div>
-                    ))}
-                  </div>
-                )}
-              />
-            </div>
-          </section>
-       
+            <FilterResults
+              value={search}
+              data={movies}
+              renderResults={(res) => (
+                <div
+                  className="search-result"
+                  style={
+                    this.state.search.length >= 3
+                      ? { display: "block" }
+                      : { display: "none" }
+                  }
+                >
+                  {res.map((data, index) => (
+                    <div
+                      key={index.id}
+                      style={
+                        this.state.search === " "
+                          ? { display: "none" }
+                          : { display: "block" }
+                      }
+                    >
+                      <Link to={`Filme/${data?.id}`}>
+                        <span
+                          className="image-link-film"
+                          style={{
+                            backgroundSize: "100px 50px",
+                            backgroundPosition: "center",
+                            backgroundRepeat: "no-repeat",
+                            backgroundImage: `url(${`https://image.tmdb.org/t/p/w500${data?.poster_path}`})`,
+                          }}
+                        ></span>
+                        <p>
+                          {data?.title || data?.name}
+                          <div
+                            className="circlet-search"
+                            style={
+                              (data?.vote_average <= 4
+                                ? { borderColor: "red" }
+                                : { borderColor: "gold" },
+                              data?.vote_average <= 7
+                                ? { borderColor: "gold" }
+                                : { borderColor: "green" })
+                            }
+                          >
+                            {data?.vote_average}
+                          </div>
+                        </p>
+                      </Link>
+                    </div>
+                  ))}
+                </div>
+              )}
+            />
+          </div>
+        </section>
 
         <section className="header-card">
           <h1 className="titles"> Tendências </h1>
           <div className="header-container">
-            {this.state.Trending.map((item) => {
+            {this.state.Trending.reverse().map((item) => {
               return (
                 <Link
                   to={`Filme/${item?.id}`}
@@ -292,7 +284,7 @@ export default class LoadFilmes extends Component {
         <section className="header-card">
           <h1 className="titles"> Mais Votados </h1>
           <div className="header-container">
-            {this.state.mostRated.map((item) => {
+            {this.state.mostRated.reverse().map((item) => {
               return (
                 // link card
                 <Link
@@ -343,7 +335,7 @@ export default class LoadFilmes extends Component {
         <section className="header-card">
           <h1 className="titles"> Popular </h1>
           <div className="header-container">
-            {this.state.mostPopular.map((item) => {
+            {this.state.mostPopular.reverse().map((item) => {
               return (
                 // link card
                 <Link
@@ -394,7 +386,7 @@ export default class LoadFilmes extends Component {
         <section className="header-card">
           <h1 className="titles"> Para Assistir Agora </h1>
           <div class="header-container">
-            {this.state.Filmes.map((item) => {
+            {this.state.Filmes.reverse().map((item) => {
               return (
                 <Link
                   to={`Filme/${item.id}`}
