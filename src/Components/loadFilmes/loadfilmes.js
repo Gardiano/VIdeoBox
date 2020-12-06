@@ -234,7 +234,7 @@ export default class LoadFilmes extends Component {
         <section className="header-card">
           <h1 className="titles"> Tendências </h1>
           <div className="header-container">
-            {this.state.Trending.reverse().map((item) => {
+            {this.state.Trending.map((item) => {
               return (
                 <Link
                   to={`Filme/${item?.id}`}
@@ -284,7 +284,7 @@ export default class LoadFilmes extends Component {
         <section className="header-card">
           <h1 className="titles"> Mais Votados </h1>
           <div className="header-container">
-            {this.state.mostRated.reverse().map((item) => {
+            {this.state.mostRated.map((item) => {
               return (
                 // link card
                 <Link
@@ -335,7 +335,7 @@ export default class LoadFilmes extends Component {
         <section className="header-card">
           <h1 className="titles"> Popular </h1>
           <div className="header-container">
-            {this.state.mostPopular.reverse().map((item) => {
+            {this.state.mostPopular.map((item) => {
               return (
                 // link card
                 <Link
@@ -386,7 +386,7 @@ export default class LoadFilmes extends Component {
         <section className="header-card">
           <h1 className="titles"> Para Assistir Agora </h1>
           <div class="header-container">
-            {this.state.Filmes.reverse().map((item) => {
+            {this.state.Filmes.map((item) => {
               return (
                 <Link
                   to={`Filme/${item.id}`}
