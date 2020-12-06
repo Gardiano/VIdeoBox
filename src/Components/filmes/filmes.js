@@ -152,7 +152,10 @@ export default class Films extends Component {
           </div>
         </main>
 
-        <h1 style={{ marginTop: "70px!important", marginBottom: "-50px" }}>
+        <h1 style={{
+          marginTop: "70px!important", 
+          marginBottom: "-50px",
+          color:'whitesmoke' }}>
           
           Atores
         </h1>

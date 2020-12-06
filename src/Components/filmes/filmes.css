@@ -68,12 +68,10 @@ margin-left: 5px;
 
 .textos-box strong {
 color: whitesmoke;
-height: 150px;
 font-size: 18px;
 text-align: left;
 margin: auto;
 display: flex;
-padding-right: 20px;
 float: left;
 margin-left: 5px;
 font-family: italic;
@@ -88,8 +86,8 @@ font-size: 36px;
 text-align: left;
 display: flex;
 color: rgb(235, 235, 235);
-font-family: Arial, sans-serif;
 font-weight: 400;
+font-family: 'Source Sans Pro', sans-serif;
 }
 
 .textos-box h5 {
@@ -111,6 +109,7 @@ font-weight: 400;
 font-style: italic;
 opacity: 0.8;
 color: white;
+font-family: 'Source Sans Pro', sans-serif;
 }
 .textos-box h6 {
 width: auto;
@@ -137,15 +136,16 @@ margin-top: 5px;
 width: 100px;
 height: 80px;
 float: left;
-color: rgb(241, 241, 241);
 color: rgb(235, 235, 235);
-font-family: Arial, sans-serif;
 font-weight: 400;
+font-family: 'Source Sans Pro', sans-serif;
 }
 .textos-box .overview {
+margin: 10px auto;
+display: block;
 color: rgb(235, 235, 235);
-font-family: Arial, sans-serif;
 font-weight: 400;
+font-family: 'Source Sans Pro', sans-serif;
 }
 
 .circlet-films {
@@ -185,15 +185,15 @@ section .crew-box {
 display: flex;
 overflow-x: scroll;
 overflow-y: hidden;
-
 }
 
 section .crew-box > div {
-width: 120px;
+width: 100px;
 height: 170px;
-background-color: #f1f1f1;
+background-color: #252e39;
 margin: 5px;
 padding: 25px;
+border-radius: 10px;
 }
 
 /* trailler vídeo cfg */
@@ -209,15 +209,17 @@ border-radius: 8px;
 }
 
 .fade-box {
-width: 140px;
-margin-left: -10px;
+width: 145px;
+margin-left: -23px;
 display: block;
-margin-top: 160px;
-background-color: rgba(0, 0, 0, 0.26);
+margin-top: 163px!important;
+border-bottom-left-radius: 10px;
+border-bottom-right-radius: 10px;
+background-color: rgba(0, 0, 0, 0.705);
 }
 
 .fade-content {
-width: 135px;
+width: 145px;
 margin: auto;
 display: block;
 color:white;
@@ -231,7 +233,7 @@ margin: auto;
 display: block;
 color: whitesmoke(231, 230, 230);
 font-size: 14px;
-font-family: Arial, Helvetica, sans-serif;
+font-family: 'Source Sans Pro', sans-serif;
 }
 
 .back-button-box {
