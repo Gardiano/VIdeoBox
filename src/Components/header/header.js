@@ -11,7 +11,7 @@ export default class Header extends Component {
                 <div className="Header-content">
                     <Link to="/Home">
                         <strong>
-                            <i class="fas fa-video"></i> VídeoBox  
+                           VIDEOBOX 
                         </strong>    
                     </Link>                  
                 </div>                
