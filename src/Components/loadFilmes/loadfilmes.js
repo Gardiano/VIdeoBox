@@ -127,7 +127,7 @@ export default class LoadFilmes extends Component {
   }
 
   async loadMostPopular() {
-    let urlPopular = `https://api.themoviedb.org/3/movie/popular?api_key=5f0de47789bd5535f17999cce273751e&language=pt-BR&page=5`;
+    let urlPopular = `https://api.themoviedb.org/3/movie/popular?api_key=5f0de47789bd5535f17999cce273751e&language=pt-BR&page=2s`;
     await fetch(urlPopular)
       .then((r) => r.json())
       .then((json) => {
