@@ -95,13 +95,10 @@ export default class LoadFilmes extends Component {
   async loadTrending() {
     let urlTrending = `https://api.themoviedb.org/3/trending/movie/day?api_key=5f0de47789bd5535f17999cce273751e&language=pt-BR`;
     await fetch(urlTrending)
-      // tratamento de erros da api;
-      .then((r) => {
-        //
+      .then((r) => {  
         if (r.status === 200) {
           return r.json();
         }
-        //
         if (r.status === 404 || r.status === 400) {
           throw Error(r.statusText);
         }
