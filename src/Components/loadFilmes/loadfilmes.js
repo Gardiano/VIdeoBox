@@ -155,14 +155,6 @@ export default class LoadFilmes extends Component {
     return (
       <div onClick={this.closeSearchBar}>
         <Header />
-        <button className="back">
-          <Link to="/">
-            <i 
-            style={{marginRight:'10px!important'}}
-            class="fas fa-long-arrow-alt-left"></i>
-          </Link>
-        </button>
-
         <section className="search-box">
           <div className="search-content">
             <input

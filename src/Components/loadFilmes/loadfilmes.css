@@ -1,20 +1,3 @@
-.back  {
-width: 55px;
-height: 20px;
-border-radius: 5px;
-background-color: #252e39;
-margin-top: 10px;
-margin-left: 5px;
-float: left;
-border: none;
-outline: none;
-position: relative;
-}
-
-.back a {
-width: 100%;
-color: white;
-}
 
 .search-box {
 width: 100%;

@@ -1,4 +1,19 @@
-@media (max-width: 700px) {
+
+@media (max-width: 700px) {    
+.search-result {
+width: 100%;
+max-width: 420px;
+height: 300px;
+background-color:white;
+margin: 1px auto;
+display: flex;
+z-index: 9999;
+position: relative;
+overflow-y: scroll;
+line-height: 2;
+font-size: 16px;
+}
+
 .search-content {
 width: 100%;    
 max-width: 650px;
@@ -34,22 +49,13 @@ border-bottom: 3px solid #181e25;
 transition: 0.2s;
 }
 
+
 .search-result {
-width: 100%;
-max-width: 420px;
-height: 300px;
-background-color:white;
-margin: 1px auto;
-display: flex;
-z-index: 9999;
-position: relative;
-overflow-y: scroll;
-line-height: 2;
-font-size: 16px;
+    background-color: #252e39;
 }
 
 .search-result p {
-color: rgb(0, 0, 0)!important;
+color: whitesmoke;
 border-bottom: 1px solid grey;
 margin-bottom: -4px;
 padding: 5px;
