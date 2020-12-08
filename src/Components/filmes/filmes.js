@@ -23,7 +23,7 @@ export default class Films extends Component {
     this.state = {
       Movies: Object,
       Credits: [],      
-      keyVideo: []
+      keyVideo: String
     };
   }
 
@@ -51,7 +51,7 @@ export default class Films extends Component {
     let url = `https://api.themoviedb.org/3/movie/${id}/credits?api_key=5f0de47789bd5535f17999cce273751e&language=pt-BR`;
    await fetch(url)
       .then((r) => r.json())
-      .then((json) => {
+      .then((json) => {       
         this.setState({ Credits: json.cast });
       })
       .catch((error) => {
@@ -65,8 +65,9 @@ export default class Films extends Component {
    await fetch(url)
       .then((r) => r.json())
       .then((json) => {
-        this.setState({keyVideo: json.results});
-      })
+        json.results.map(key => 
+          this.setState({keyVideo: key.key})                  
+        )})
       .catch((error) => {
         console.log(error);
       });
@@ -105,22 +106,72 @@ export default class Films extends Component {
               <h1> {this.state.Movies.title} </h1>
 
               <h5>
-                Data De Lançamento: &nbsp;
+                Data De Lançamento:&nbsp;
                 <Moment
+                  id="tag-generos"
                   locale="pt-br"
                   format="DD/MM/YYYY"
                   date={this.state.Movies.release_date}
+                    style={{                  
+                    marginBottom:'10px',
+                    background:'rgb(10, 120, 153)'
+                  }}
                 ></Moment>
               </h5>
 
               <h6>
                 Gênero:
                 {this.state.Movies?.genres?.map((item) => {
-                  return <h6> {item.name}, </h6>;
+                  return (
+                  <h6 id="tag-generos" style={
+                  item.name === 'Ação' ? 
+                  {background:'rgb(15, 64, 197)'} 
+                  :
+                  item.name === 'Thriller' ? 
+                  {background:'rgb(100, 100, 100)'} 
+                  : 
+                  item.name === 'Ficção científica' ? 
+                  {background:'rgb(55, 134, 55)'} 
+                  :
+                  item.name === 'Suspense' ? 
+                  {background:'orangered'} 
+                  :
+                  item.name === 'Drama' ? 
+                  {background:'orange'} 
+                  :
+                  item.name === 'Crime' ? 
+                  {background:'rgb(15, 33, 71)'} 
+                  :
+                  item.name === 'Romance' ? 
+                  {background:'rgb(168, 4, 4)'} 
+                  :
+                  item.name === 'Terror' ? 
+                  {background:'black'} 
+                  :
+                  item.name === 'Família' ? 
+                  {background:'yellowgreen'} 
+                  :
+                  item.name === 'Fantasia' ? 
+                  {background:'violet'} 
+                  :
+                  item.name === 'Comédia' ? 
+                  {background:'purple'} 
+                  :
+                  item.name === 'História' ? 
+                  {background:'Brown'} 
+                  :
+                  item.name === 'Aventura' ? 
+                  {background:'rgb(27, 146, 134)'} 
+                  :
+                  {}
+                }> {item.name} </h6>
+                  );
                 })}
               </h6>
 
-              <h6> Duração: {this.state.Movies.runtime} Min </h6>
+              <h5>
+                Duração: {this.state.Movies.runtime} Min
+              </h5>
 
               <div className="avaliacao-box">
                 <strong>
@@ -145,6 +196,7 @@ export default class Films extends Component {
                
                 {this.state.Movies.tagline} &nbsp;
               </label>
+
               <strong className="overview">
                 {this.state.Movies.overview}
               </strong>
@@ -161,12 +213,12 @@ export default class Films extends Component {
         </h1>
         <section>
           <div className="crew-box">
-            {this.state.Credits.map((item) => {
+            {this.state?.Credits?.map((item) => {
               return (
                 <div
-                  key={item.id}
+                  key={item?.id}
                   style={
-                    item.profile_path == null
+                    item?.profile_path == null
                       ? {
                           backgroundImage: `url(${`${person}`})`,
                           backgroundPosition: "center",
@@ -174,7 +226,7 @@ export default class Films extends Component {
                           backgroundRepeat: "no-repeat",
                         }
                       : {
-                          backgroundImage: `url(${`https://image.tmdb.org/t/p/w500${item.profile_path}`})`,
+                          backgroundImage: `url(${`https://image.tmdb.org/t/p/w500${item?.profile_path}`})`,
                           backgroundPosition: "center",
                           backgroundSize: "contain",
                           backgroundRepeat: "no-repeat",
@@ -184,8 +236,8 @@ export default class Films extends Component {
                   <div>
                     <div className="fade-box">
                       <div className="fade-content">
-                        <p> N: {item.name} </p>
-                        C: {item.character}
+                        <p> N: {item?.name} </p>
+                        C: {item?.character}
                       </div>
                     </div>
                   </div>
@@ -197,7 +249,7 @@ export default class Films extends Component {
 
         <div>
           <Iframe
-            url={ `https://www.youtube.com/embed/${this.state.keyVideo[0]?.key}` } 
+            url={ `https://www.youtube.com/embed/${this.state?.keyVideo}` } 
             className="iframe"
             display="flex"
             backgroundPosition="center"
