@@ -11,15 +11,11 @@ export default class Erro extends Component {
             <div className="login-box">
            
                 <div className="login-logo">    
-                <strong style={{fontSize:'20px'}}> Ops.. página não encontrada tente </strong>   
+                <strong style={{fontSize:'20px'}}> Ops.. página não encontrada tente </strong>  
                                                    
                      <Link to="/Home" style={{color:'white'}}>  
                        Vídeo Box 
-                     </Link> 
-                    
-                   
-                 
-                                 
+                     </Link>                                       
                 </div> 
                
             </div> 
