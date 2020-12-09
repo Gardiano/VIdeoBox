@@ -163,6 +163,12 @@ export default class Films extends Component {
                   item.name === 'Aventura' ? 
                   {background:'rgb(27, 146, 134)'} 
                   :
+                  item.name === 'Música' ? 
+                  {background:'rgb(190, 166, 26)'} 
+                  :
+                  item.name === 'Faroeste' ? 
+                  {background:'rgb(190, 166, 26)'} 
+                  :
                   {}
                 }> {item.name} </h6>
                   );
@@ -208,9 +214,9 @@ export default class Films extends Component {
           marginTop: "70px!important", 
           marginBottom: "-50px",
           color:'whitesmoke' }}>
-          
           Atores
         </h1>
+        
         <section>
           <div className="crew-box">
             {this.state?.Credits?.map((item) => {
@@ -233,14 +239,14 @@ export default class Films extends Component {
                         }
                   }
                 >
-                  <div>
+                  
                     <div className="fade-box">
                       <div className="fade-content">
                         <p> N: {item?.name} </p>
                         C: {item?.character}
                       </div>
                     </div>
-                  </div>
+                  
                 </div>
               );
             })}

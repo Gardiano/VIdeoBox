@@ -187,7 +187,7 @@ width: 100%;
 max-width: 1300px;
 height: 235px;
 margin: 70px auto;
-display: flex;
+display: block;
 margin-bottom: 100px;
 }
 
@@ -203,7 +203,35 @@ height: 170px;
 background-color: #252e39;
 margin: 5px;
 padding: 25px;
-border-radius: 10px;
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+}
+
+.fade-box {
+width: 147px;
+height: 55px;
+margin-left: -23px;
+display: block;
+margin-top: 140px!important;
+background-color: rgba(0, 0, 0, 0.705);
+font-family: monospace;
+}
+
+.fade-content {
+width: 145px;
+margin: auto;
+color:white;
+font-size: 14px;
+padding-top: 2px;
+}
+
+.fade-content p {
+width: 145px;
+margin: auto;
+display: block;
+color: whitesmoke(231, 230, 230);
+font-size: 14px;
+
 }
 
 /* trailler vídeo cfg */
@@ -216,34 +244,6 @@ margin-bottom: 100px;
 display: block;
 border: 1px solid transparent;
 border-radius: 8px;
-}
-
-.fade-box {
-width: 145px;
-margin-left: -23px;
-display: block;
-margin-top: 163px!important;
-border-bottom-left-radius: 10px;
-border-bottom-right-radius: 10px;
-background-color: rgba(0, 0, 0, 0.705);
-}
-
-.fade-content {
-width: 145px;
-margin: auto;
-display: block;
-color:white;
-font-size: 14px;
-font-family: Arial, Helvetica, sans-serif;
-}
-
-.fade-content p {
-width: 135px;
-margin: auto;
-display: block;
-color: whitesmoke(231, 230, 230);
-font-size: 14px;
-font-family: 'Source Sans Pro', sans-serif;
 }
 
 .back-button-box {
@@ -267,4 +267,3 @@ text-decoration: none;
 color: whitesmoke;
 font-size: 30px;
 }
-
