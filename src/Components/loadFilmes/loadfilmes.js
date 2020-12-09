@@ -112,7 +112,7 @@ export default class LoadFilmes extends Component {
   }
 
   async loadMostRated() {
-    let urlRated = `https://api.themoviedb.org/3/movie/top_rated?api_key=5f0de47789bd5535f17999cce273751e&language=pt-BR`;
+    let urlRated = `https://api.themoviedb.org/3/movie/top_rated?api_key=5f0de47789bd5535f17999cce273751e&language=pt-BR&page=2`;
     await fetch(urlRated)
       .then((r) => r.json())
       .then((json) => {
