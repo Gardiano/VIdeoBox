@@ -124,8 +124,7 @@ width: 250px;
 height: 290px;
 margin: 10px;
 font-size: 30px;
-border-top-left-radius: 5px;
-border-top-right-radius: 5px;
+
 }
 
 .header-card {
@@ -158,7 +157,6 @@ margin-top: 235px;
 z-index: 9999!important;
 font-weight: 100;
 font-family: 'Bebas Neue', cursive;
-
 }
 
 a .circlet {
@@ -252,5 +250,3 @@ border-radius: 50px;
 height: 1px;
 background: #252e39;
 }
-
-

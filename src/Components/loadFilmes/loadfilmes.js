@@ -93,7 +93,7 @@ export default class LoadFilmes extends Component {
   }
 
   async loadTrending() {
-    let urlTrending = `https://api.themoviedb.org/3/trending/movie/day?api_key=5f0de47789bd5535f17999cce273751e&language=pt-BR`;
+    let urlTrending = `https://api.themoviedb.org/3/trending/movie/day?api_key=5f0de47789bd5535f17999cce273751e&language=pt-BR&page=2`;
     await fetch(urlTrending)
       .then((r) => {  
         if (r.status === 200) {
@@ -233,13 +233,13 @@ export default class LoadFilmes extends Component {
                           backgroundImage: `url(${`${EmptyFilm}`})`,
                           backgroundPosition: "center",
                           backgroundSize: "contain",
-                          backgroundRepeat: "no-repeat",
+                          backgroundRepeat: "no-repeat",                                             
                         }
                       : {
                           backgroundImage: `url(${`https://image.tmdb.org/t/p/w500${item.poster_path}`})`,
                           backgroundPosition: "center",
                           backgroundSize: "contain",
-                          backgroundRepeat: "no-repeat",
+                          backgroundRepeat: "no-repeat",                         
                         }
                   }
                 >
